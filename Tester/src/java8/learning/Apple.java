@@ -4,6 +4,7 @@ public class Apple {
 	
 	public Integer weight;
 	public String color;
+	public String country;
 	
 	public Apple() {
 		
@@ -15,6 +16,14 @@ public class Apple {
 		super();
 		this.weight = weight;
 		this.color = color;
+	}
+
+	
+	public Apple(Integer weight, String color, String country) {
+		super();
+		this.weight = weight;
+		this.color = color;
+		this.country= country;
 	}
 
 
@@ -31,6 +40,13 @@ public class Apple {
 	public void setColor(String color) {
 		this.color = color;
 	}
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	
 	
 
 }
