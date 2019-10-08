@@ -24,11 +24,10 @@ public class SortingByComparatorTester {
 		
 		//Sorting using LAMBDA instead of anonymous inner class
 		
-		apples.sort(new Comparator<Apple>() {
-			public int compare(Apple a1, Apple a2) {
-				return a1.getWeight().compareTo(a2.getWeight());
-			}
-		});
+		apples.sort((Apple a1, Apple a2) -> a1.getWeight().compareTo(a2.getWeight()));
+		
+		//OR Using Comparator's static method comparing Which also returns a Comparator based on Key and Value
+		apples.sort(java.util.Comparator.comparing(Apple::getWeight));
 		
 		System.out.print("Lambda Comparator Sorted Apples"+apples.size());
 	}
