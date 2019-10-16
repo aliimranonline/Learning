@@ -34,7 +34,7 @@ public class StreamsExcersies {
 		int length=arr.length;
 		
 		//Q3:Find all traders from Cambridge and sort them by name.
-		List<Trader> cambridgeTraders=transactions.stream().filter(i -> i.getTrader().getCity().equalsIgnoreCase("Cambridge")).distinct().map(Transaction::getTrader).sorted(java.util.Comparator.comparing(Trader::getName)).collect(toList());
+		List<Trader> cambridgeTraders=transactions.stream().filter(i -> i.getTrader().getCity().equalsIgnoreCase("Cambridge")).map(Transaction::getTrader).sorted(java.util.Comparator.comparing(Trader::getName)).collect(toList());
 		cambridgeTraders.size();
 		
 		//Q4:Return a string of all trader's names sorted alphabetically
